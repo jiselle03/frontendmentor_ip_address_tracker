@@ -23,6 +23,35 @@ header {
   margin-top: 0;
 }
 
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  width: 300px;
+}
+
+.arrow-container {
+  background-color: hsl(0, 0%, 17%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.arrow {
+  background-image: url("./assets/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: 50%;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
 /* TYPOGRAPHY */
 
 h1 {
