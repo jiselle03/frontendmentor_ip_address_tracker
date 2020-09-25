@@ -78,6 +78,10 @@ input {
   padding: 2rem 3rem 2rem 2rem;
 }
 
+.result-container h3 {
+  margin-top: 0.5rem;
+}
+
 .vr {
   border-right: 1.5px solid lightgrey;
   height: 50%;
