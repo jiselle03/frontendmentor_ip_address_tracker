@@ -23,6 +23,7 @@ header {
   margin-top: 0;
 }
 
+/* SEARCH BAR */
 .searchbar {
   display: flex;
   flex-direction: row;
@@ -37,9 +38,13 @@ input {
 }
 
 .arrow-container {
-  background-color: hsl(0, 0%, 17%);
+  background-color: #000;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.arrow-container:hover {
+  background-color: hsl(0, 0%, 17%);
 }
 
 .arrow {
