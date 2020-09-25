@@ -57,6 +57,32 @@ input {
   cursor: pointer;
 }
 
+/* RESULT CONTAINER */
+.result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  position: relative;
+  top: -75px;
+  height: 150px;
+  width: 75%;
+  background-color: #fff;
+  margin: auto;
+}
+
+.result-container > .result {
+  height: 75%;
+  width: 75%;
+  padding: 2rem 3rem 2rem 2rem;
+}
+
+.vr {
+  border-right: 1.5px solid lightgrey;
+  height: 50%;
+}
+
 /* TYPOGRAPHY */
 
 h1 {
