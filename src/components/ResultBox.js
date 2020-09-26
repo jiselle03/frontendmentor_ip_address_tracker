@@ -29,7 +29,9 @@ const ResultBox = props => {
                         <small>{result.label}</small>
                         <h3>{result.data}</h3>
                     </div>
-                    <div className="vr"></div>
+                    {result.label !== "ISP" && (
+                        <div className="vr"></div>
+                    )}
                 </>
             ))}
         </div>
