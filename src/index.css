@@ -18,7 +18,6 @@ body {
 
 header {
   background-image: url("./assets/pattern-bg.png");
-  /* background-repeat: no-repeat; */
   height: 300px;
   margin-top: 0;
 }
@@ -65,19 +64,19 @@ input {
 
 /* RESULT CONTAINER */
 .result-container {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   position: relative;
   height: 300px;
-  width: 80%;
+  width: 85%;
   top: -150px;
   background-color: #fff;
   margin: auto;
 }
 
-.result-container > .result {
+.result {
   height: 25%;
   padding: 1rem auto;
   text-align: center;
@@ -88,8 +87,6 @@ input {
 }
 
 .vr {
-  border-right: 1.5px solid lightgrey;
-  height: 50%;
   display: none;
 }
 
@@ -98,18 +95,36 @@ input {
     display: flex;
     flex-direction: row;
     height: 150px;
-    width: 75%;
+    width: 80vw;
     top: -75px;
   }
 
-  .result-container > .result {
+  .result-box {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
     width: 25%;
-    padding: 2rem 3rem 2rem 2rem;
+  }
+
+  .result {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 1.5rem 2rem;
   }
 
   .vr {
     display: block;
+    border-right: 1.5px solid lightgrey;
+    height: 50%;
+    align-self: center;
   }
+}
+
+/* MAP CONTAINER */
+.map-container {
+  height: 75%;
+  width: 100vw;
 }
 
 /* TYPOGRAPHY */
@@ -124,7 +139,7 @@ h1 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: hsl(0, 0%, 17%);
 }
