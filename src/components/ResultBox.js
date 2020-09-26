@@ -13,7 +13,7 @@ const ResultBox = props => {
         },
         {
             "label": "Timezone",
-            "data": location ? location.timezone : "N/A"
+            "data": location ? `UTC ${location.timezone}` : "N/A"
         },
         {
             "label": "ISP",
