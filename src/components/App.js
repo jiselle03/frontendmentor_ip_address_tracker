@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
-import Axios from "axios";
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 
-import baseUrl from "../config";
+import baseUrl from '../config';
+import ResultBox from './ResultBox';
+import MapContainer from './MapContainer';
 
 const App = () => {
-  const trackIp = event => {
+  const [result, setResult] = useState({});
+  
+  const handleSearch = event => {
     event.preventDefault();
     const input = document.querySelector("input").value;
-    Axios.get(`${baseUrl}${input}`).then(data => console.log(data.data));
+    trackIp(input);
   };
+
+  const trackIp = input => {
+    Axios.get(`${baseUrl}${input}`).then(response => {
+      setResult(response.data);
+    });
+  };
+  
+  useEffect(() => {
+    trackIp("128.32.255.255");
+  }, []);
 
   return (
     <div className="App">
@@ -18,20 +32,23 @@ const App = () => {
         <div className="searchbar">
           <input
             type="text" 
-            placeholder="Enter IP Address" 
+            placeholder="Search for any IP address or domain" 
           />
           <div 
             className="arrow-container"
-            onClick={event => trackIp(event)}
+            onClick={event => handleSearch(event)}
           >
             <div className="arrow"></div>
           </div>
         </div>
       </header>
 
-      <main>
+      <main> 
+        <ResultBox result={result} />
         
-        
+        {result.location && (
+          <MapContainer position={[result.location.lat, result.location.lng]} />
+        )}
       </main>
     </div>
   );
