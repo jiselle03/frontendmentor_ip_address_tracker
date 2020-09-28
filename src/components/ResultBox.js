@@ -24,15 +24,15 @@ const ResultBox = props => {
     return (
         <div className="result-container">
             {results.map(result => (
-                <>
-                    <div key={result.label} className="result">
+                <div key={result.label} className="result-box">
+                    <div className="result">
                         <small>{result.label}</small>
                         <h3>{result.data}</h3>
                     </div>
                     {result.label !== "ISP" && (
                         <div className="vr"></div>
                     )}
-                </>
+                </div>
             ))}
         </div>
     );
