@@ -19,12 +19,11 @@ body {
 header {
   background-image: url("./assets/pattern-bg.png");
   height: 300px;
-  margin-top: 0;
 }
 
 @media only screen and (min-width: 768px) {
   header {
-    height: 250px;
+    height: 30vh;
   }
 }
 
@@ -64,16 +63,18 @@ input {
 
 /* RESULT CONTAINER */
 .result-container {
-  border: 1px solid black;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  position: relative;
-  height: 300px;
-  width: 85%;
-  top: -150px;
+  position: absolute;
+  height: 250px;
+  width: 85vw;
+  top: 22.5%;
+  left: 7.5%;
   background-color: #fff;
   margin: auto;
+  z-index: 10000;
+  padding: 1.5rem 0;
 }
 
 .result {
@@ -96,7 +97,9 @@ input {
     flex-direction: row;
     height: 150px;
     width: 80vw;
-    top: -75px;
+    top: 20%;
+    left: 10%;
+    padding: 0;
   }
 
   .result-box {
@@ -122,8 +125,8 @@ input {
 }
 
 /* MAP CONTAINER */
-.map-container {
-  height: 75%;
+.leaflet-container {
+  height: 70vh;
   width: 100vw;
 }
 
@@ -134,7 +137,7 @@ h1 {
   font-weight: 700;
   color: #fff;
   margin: 0;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
 }
 
